@@ -1,0 +1,14 @@
+{
+  "name": "adelekyriacou.com",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": " app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adele",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
