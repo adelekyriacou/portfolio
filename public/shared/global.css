@@ -8,6 +8,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  color: var(--dark-cyan);
+  font-family: "Rubik", san-serif;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
 #navbar {
   background-color: transparent;
   display: flex;
@@ -56,6 +65,32 @@ html {
 #navbar a:hover {
   border-bottom: 3px solid var(--orange);
 }
+#welcome-section h1 {
+  font-size: 3rem;
+  font-family: "Rubik Mono One", san-serif;
+  color: #fff;
+  padding: 6rem 3rem 0;
+  margin-top: 3.5rem;
+  text-transform: uppercase;
+  line-height: 4rem;
+}
+
+#welcome-section p {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0 3rem;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-family: "Rubik Mono One", san-serif;
+  text-shadow: 2px 2px 0.5px var(--orange);
+}
+
 .project-grid {
   display: flex;
   flex-direction: column;
@@ -70,6 +105,7 @@ html {
   margin: 0.75rem;
 }
 
+  text-align: center;
 /* Devices larger than 850px wide, e.g. laptops. */
 
 @media (min-width: 850px) {
