@@ -4,3 +4,7 @@
   --dark-cyan: rgba(8,44,44,1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
