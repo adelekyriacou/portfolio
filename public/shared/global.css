@@ -8,6 +8,20 @@ html {
   scroll-behavior: smooth;
 }
 
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-tile {
+  width: 80vw;
+  height: 60vw;
+  background-color: var(--strong-cyan);
+  border-radius: 0.25rem;
+  margin: 0.75rem;
+}
+
 /* Devices larger than 850px wide, e.g. laptops. */
 
 @media (min-width: 850px) {
