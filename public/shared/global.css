@@ -8,3 +8,47 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Devices larger than 850px wide, e.g. laptops. */
+
+@media (min-width: 850px) {
+  main {
+    padding: 3rem;
+  }
+
+  #navbar {
+    padding: 1rem;
+  }
+
+  #navbar a {
+  }
+
+
+
+  #welcome-section {
+    /* margin-top: auto; */
+  }
+
+  #welcome-section p {
+    font-size: 1.25rem;
+  }
+
+  #welcome-section h1 {
+    margin-top: 6rem;
+  }
+
+  #contact {
+    margin-top: 5.5rem;
+  }
+
+  .project-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-top: 1rem; */
+  }
+
+  .project-tile {
+    width: 40vw;
+    height: 30vw;
+  }
+}
