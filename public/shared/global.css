@@ -8,14 +8,46 @@ html {
   scroll-behavior: smooth;
 }
 
+#navbar {
   background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
   -webkit-transition: all ease-out .2s;
   -moz-transition: all ease-out .2s;
   -o-transition: all ease-out .2s;
   transition: all ease-out .2s;
+}
+
 #navbar.active {
   background-color: #fff;
 }
+
+#navbar ul {
+  display: flex;
+  margin: 0;
+}
+
+#navbar li {
+  list-style: none;
+}
+
+#navbar a {
+  color: #fff;
+  font-family: "Rubik", san-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  text-shadow: 1px 1px 0.5px var(--orange);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
 #navbar.active a {
   color: var(--dark-cyan);
   text-shadow: none;
