@@ -52,6 +52,10 @@ html {
   color: var(--dark-cyan);
   text-shadow: none;
 }
+
+#navbar a:hover {
+  border-bottom: 3px solid var(--orange);
+}
 .project-grid {
   display: flex;
   flex-direction: column;
