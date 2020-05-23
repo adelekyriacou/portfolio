@@ -54,7 +54,6 @@ h2 {
   text-decoration: none;
   text-transform: uppercase;
   margin-left: 1.25rem;
-  padding-bottom: 0.25rem;
 }
 
 #navbar.active a {
@@ -78,20 +77,67 @@ main {
 }
 
 #welcome-section h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Rubik Mono One", san-serif;
   color: #fff;
   padding: 6rem 3rem 0;
   margin-top: 3.5rem;
   text-transform: uppercase;
   line-height: 4rem;
+  text-shadow:
+               10px 10px      var(--dark-cyan),
+               /* textShadow(1, 9, var(--orange); */
+               9px 9px        var(--orange),
+               8px 8px        var(--orange),
+               7px 7px        var(--orange),
+               6px 6px        var(--orange),
+               5px 5px        var(--orange),
+               4px 4px        var(--orange),
+               3px 3px        var(--orange),
+               2px 2px        var(--orange),
+               1px 1px        var(--orange);
 }
+
+
+
+
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255,255,255,0.0);
+  border-radius: 5px;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(1, 1);
+    background: rgba(255,255,255,0.0);
+    animation-timing-function: ease-in;
+  }
+  5% {
+    transform: scale(0.8, 0.8);
+    background: rgba(255,255,255,1);
+    animation-timing-function: ease-out;
+  }
+  80% {
+    background: rgba(255,255,255,0.00);
+    transform: scale(1, 1);
+  }
+  100% {
+    background: rgba(255,255,255,0.0);
+    transform: scale(1, 1);
+  }
+}
+
 
 #welcome-section p {
   color: #fff;
   font-size: 1.1rem;
   padding: 0 3rem;
   margin-top: 1rem;
+  /* text-shadow: 1px 1px 30px var(--dark-cyan); */
 }
 
 #projects {
@@ -100,14 +146,14 @@ main {
 }
 
 #projects p {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 h2 {
   font-size: 2rem;
   text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-style: wavy;
+  text-decoration: underline wavy;
+  text-underline-position: under;
   font-family: "Rubik Mono One", san-serif;
   text-shadow: 2px 2px 0.5px var(--orange);
 }
@@ -118,21 +164,35 @@ h2 {
   align-items: center;
 }
 
+.project-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+
+}
+
 .project-tile {
   width: 80vw;
   height: 60vw;
   background-color: var(--strong-cyan);
-  border-radius: 0.25rem;
+  border-radius: 0.25rem!important;
   margin: 0.75rem;
+}
+
+figcaption {
+  padding: 0.5rem;
 }
 
 #contact {
   margin-top: 3.5rem;
   text-align: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 #contact p {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* Devices larger than 850px wide, e.g. laptops. */
@@ -144,6 +204,10 @@ h2 {
 
   #navbar {
     padding: 1rem;
+  }
+
+  #navbar a {
+    padding-bottom: 0.25rem;
   }
 
   #welcome-section p {
