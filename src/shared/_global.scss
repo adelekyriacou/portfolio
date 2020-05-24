@@ -4,17 +4,16 @@ $dark-cyan: rgba(8,44,44,1);
 $white: rgba(255,255,255,1);
 $white-trans: rgba(255,255,255,0.0);
 
+$font-main: "Rubik", san-serif;
+$font-headers: "Rubik Mono One", san-serif;
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   color: $dark-cyan;
-  font-family: "Rubik", san-serif;
-}
-
-h2 {
-  font-size: 1rem;
+  font-family: $font-main;
 }
 
 #navbar {
@@ -46,7 +45,6 @@ h2 {
 
 #navbar a {
   color: $white;
-  font-family: "Rubik", san-serif;
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: 0.05rem;
@@ -78,7 +76,7 @@ main {
 
 #welcome-section h1 {
   font-size: 4rem;
-  font-family: "Rubik Mono One", san-serif;
+  font-family: $font-headers;
   color: $white;
   padding: 6rem 3rem 0;
   margin-top: 3.5rem;
@@ -149,7 +147,7 @@ h2 {
   text-transform: uppercase;
   text-decoration: underline wavy;
   text-underline-position: under;
-  font-family: "Rubik Mono One", san-serif;
+  font-family: $font-headers;
   text-shadow: 2px 2px 0.5px $orange;
 }
 
