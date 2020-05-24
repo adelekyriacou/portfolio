@@ -1,15 +1,15 @@
-:root {
-  --orange: rgba(253,187,45,1);
-  --strong-cyan: rgba(34,193,195,1);
-  --dark-cyan: rgba(8,44,44,1);
-}
+$orange: rgba(253,187,45,1);
+$strong-cyan: rgba(34,193,195,1);
+$dark-cyan: rgba(8,44,44,1);
+$white: rgba(255,255,255,1);
+$white-trans: rgba(255,255,255,0.0);
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: var(--dark-cyan);
+  color: $dark-cyan;
   font-family: "Rubik", san-serif;
 }
 
@@ -32,7 +32,7 @@ h2 {
 }
 
 #navbar.active {
-  background-color: #fff;
+  background-color: $white;
 }
 
 #navbar ul {
@@ -45,24 +45,24 @@ h2 {
 }
 
 #navbar a {
-  color: #fff;
+  color: $white;
   font-family: "Rubik", san-serif;
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: 0.05rem;
-  text-shadow: 1px 1px 0.5px var(--orange);
+  text-shadow: 1px 1px 0.5px $orange;
   text-decoration: none;
   text-transform: uppercase;
   margin-left: 1.25rem;
 }
 
 #navbar.active a {
-  color: var(--dark-cyan);
+  color: $dark-cyan;
   text-shadow: none;
 }
 
 #navbar a:hover {
-  border-bottom: 3px solid var(--orange);
+  border-bottom: 3px solid $orange;
 }
 
 main {
@@ -73,67 +73,62 @@ main {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: linear-gradient(0deg, var(--orange) 30%, var(--strong-cyan) 100%);
+  background: linear-gradient(0deg, $orange 30%, $strong-cyan 100%);
 }
 
 #welcome-section h1 {
   font-size: 4rem;
   font-family: "Rubik Mono One", san-serif;
-  color: #fff;
+  color: $white;
   padding: 6rem 3rem 0;
   margin-top: 3.5rem;
   text-transform: uppercase;
   line-height: 4rem;
   text-shadow:
-               10px 10px      var(--dark-cyan),
-               /* textShadow(1, 9, var(--orange); */
-               9px 9px        var(--orange),
-               8px 8px        var(--orange),
-               7px 7px        var(--orange),
-               6px 6px        var(--orange),
-               5px 5px        var(--orange),
-               4px 4px        var(--orange),
-               3px 3px        var(--orange),
-               2px 2px        var(--orange),
-               1px 1px        var(--orange);
+               10px 10px      $dark-cyan,
+               9px 9px        $orange,
+               8px 8px        $orange,
+               7px 7px        $orange,
+               6px 6px        $orange,
+               5px 5px        $orange,
+               4px 4px        $orange,
+               3px 3px        $orange,
+               2px 2px        $orange,
+               1px 1px        $orange;
 }
-
-
-
-
 
 .star {
   position: absolute;
   width: 2px;
   height: 2px;
-  background: rgba(255,255,255,0.0);
+  background: $white-trans;
   border-radius: 5px;
 }
 
 @keyframes twinkle {
   0% {
     transform: scale(1, 1);
-    background: rgba(255,255,255,0.0);
-    animation-timing-function: ease-in;
+    background: $white-trans;
+    animation-timing-function: ease-in .1s;
   }
-  5% {
+  60% {
     transform: scale(0.8, 0.8);
-    background: rgba(255,255,255,1);
+    background: $white;
     animation-timing-function: ease-out;
   }
   80% {
-    background: rgba(255,255,255,0.00);
+    background: $white-trans;
     transform: scale(1, 1);
   }
   100% {
-    background: rgba(255,255,255,0.0);
+    background: $white-trans;
     transform: scale(1, 1);
   }
 }
 
 
 #welcome-section p {
-  color: #fff;
+  color: $white;
   font-size: 1.1rem;
   padding: 0 3rem;
   margin-top: 1rem;
@@ -155,7 +150,7 @@ h2 {
   text-decoration: underline wavy;
   text-underline-position: under;
   font-family: "Rubik Mono One", san-serif;
-  text-shadow: 2px 2px 0.5px var(--orange);
+  text-shadow: 2px 2px 0.5px $orange;
 }
 
 .project-grid {
@@ -175,7 +170,7 @@ h2 {
 .project-tile {
   width: 80vw;
   height: 60vw;
-  background-color: var(--strong-cyan);
+  background-color: $strong-cyan;
   border-radius: 0.25rem!important;
   margin: 0.75rem;
 }

@@ -324,18 +324,12 @@ template {
 }
 
 /*# sourceMappingURL=bootstrap-reboot.css.map */
-:root {
-  --orange: rgba(253,187,45,1);
-  --strong-cyan: rgba(34,193,195,1);
-  --dark-cyan: rgba(8,44,44,1);
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: var(--dark-cyan);
+  color: #082c2c;
   font-family: "Rubik", san-serif;
 }
 
@@ -358,7 +352,7 @@ h2 {
 }
 
 #navbar.active {
-  background-color: #fff;
+  background-color: white;
 }
 
 #navbar ul {
@@ -371,24 +365,24 @@ h2 {
 }
 
 #navbar a {
-  color: #fff;
+  color: white;
   font-family: "Rubik", san-serif;
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: 0.05rem;
-  text-shadow: 1px 1px 0.5px var(--orange);
+  text-shadow: 1px 1px 0.5px #fdbb2d;
   text-decoration: none;
   text-transform: uppercase;
   margin-left: 1.25rem;
 }
 
 #navbar.active a {
-  color: var(--dark-cyan);
+  color: #082c2c;
   text-shadow: none;
 }
 
 #navbar a:hover {
-  border-bottom: 3px solid var(--orange);
+  border-bottom: 3px solid #fdbb2d;
 }
 
 main {
@@ -399,18 +393,18 @@ main {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: linear-gradient(0deg, var(--orange) 30%, var(--strong-cyan) 100%);
+  background: linear-gradient(0deg, #fdbb2d 30%, #22c1c3 100%);
 }
 
 #welcome-section h1 {
   font-size: 4rem;
   font-family: "Rubik Mono One", san-serif;
-  color: #fff;
+  color: white;
   padding: 6rem 3rem 0;
   margin-top: 3.5rem;
   text-transform: uppercase;
   line-height: 4rem;
-  text-shadow: 10px 10px var(--dark-cyan), 9px 9px var(--orange), 8px 8px var(--orange), 7px 7px var(--orange), 6px 6px var(--orange), 5px 5px var(--orange), 4px 4px var(--orange), 3px 3px var(--orange), 2px 2px var(--orange), 1px 1px var(--orange);
+  text-shadow: 10px 10px #082c2c, 9px 9px #fdbb2d, 8px 8px #fdbb2d, 7px 7px #fdbb2d, 6px 6px #fdbb2d, 5px 5px #fdbb2d, 4px 4px #fdbb2d, 3px 3px #fdbb2d, 2px 2px #fdbb2d, 1px 1px #fdbb2d;
 }
 
 .star {
@@ -425,9 +419,9 @@ main {
   0% {
     transform: scale(1, 1);
     background: rgba(255, 255, 255, 0);
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in 0.1s;
   }
-  5% {
+  60% {
     transform: scale(0.8, 0.8);
     background: white;
     animation-timing-function: ease-out;
@@ -442,7 +436,7 @@ main {
   }
 }
 #welcome-section p {
-  color: #fff;
+  color: white;
   font-size: 1.1rem;
   padding: 0 3rem;
   margin-top: 1rem;
@@ -464,7 +458,7 @@ h2 {
   text-decoration: underline wavy;
   text-underline-position: under;
   font-family: "Rubik Mono One", san-serif;
-  text-shadow: 2px 2px 0.5px var(--orange);
+  text-shadow: 2px 2px 0.5px #fdbb2d;
 }
 
 .project-grid {
@@ -483,7 +477,7 @@ h2 {
 .project-tile {
   width: 80vw;
   height: 60vw;
-  background-color: var(--strong-cyan);
+  background-color: #22c1c3;
   border-radius: 0.25rem !important;
   margin: 0.75rem;
 }
