@@ -333,10 +333,6 @@ body {
   font-family: "Rubik", san-serif;
 }
 
-h2 {
-  font-size: 1rem;
-}
-
 #navbar {
   background-color: transparent;
   display: flex;
@@ -345,48 +341,39 @@ h2 {
   top: 0;
   width: 100%;
   padding: 1rem;
-  -webkit-transition: all ease-out 0.2s;
-  -moz-transition: all ease-out 0.2s;
-  -o-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
 }
-
-#navbar.active {
-  background-color: white;
-}
-
 #navbar ul {
   display: flex;
   margin: 0;
 }
-
 #navbar li {
   list-style: none;
 }
-
 #navbar a {
   color: white;
-  font-family: "Rubik", san-serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 0.05rem;
+  line-height: 1rem;
   text-shadow: 1px 1px 0.5px #fdbb2d;
   text-decoration: none;
   text-transform: uppercase;
   margin-left: 1.25rem;
 }
-
+#navbar a:hover {
+  border-bottom: 3px solid #fdbb2d;
+}
+#navbar.active {
+  background-color: white;
+}
 #navbar.active a {
   color: #082c2c;
   text-shadow: none;
 }
 
-#navbar a:hover {
-  border-bottom: 3px solid #fdbb2d;
-}
-
 main {
-  padding: 1rem;
+  padding: 0 2rem;
 }
 
 #welcome-section {
@@ -395,65 +382,33 @@ main {
   height: 100vh;
   background: linear-gradient(0deg, #fdbb2d 30%, #22c1c3 100%);
 }
-
 #welcome-section h1 {
-  font-size: 4rem;
+  font-size: 2rem;
   font-family: "Rubik Mono One", san-serif;
   color: white;
   padding: 6rem 3rem 0;
   margin-top: 3.5rem;
   text-transform: uppercase;
-  line-height: 4rem;
+  line-height: 3rem;
   text-shadow: 10px 10px #082c2c, 9px 9px #fdbb2d, 8px 8px #fdbb2d, 7px 7px #fdbb2d, 6px 6px #fdbb2d, 5px 5px #fdbb2d, 4px 4px #fdbb2d, 3px 3px #fdbb2d, 2px 2px #fdbb2d, 1px 1px #fdbb2d;
-}
-
-.star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0);
-  border-radius: 5px;
-}
-
-@keyframes twinkle {
-  0% {
-    transform: scale(1, 1);
-    background: rgba(255, 255, 255, 0);
-    animation-timing-function: ease-in 0.1s;
-  }
-  60% {
-    transform: scale(0.8, 0.8);
-    background: white;
-    animation-timing-function: ease-out;
-  }
-  80% {
-    background: rgba(255, 255, 255, 0);
-    transform: scale(1, 1);
-  }
-  100% {
-    background: rgba(255, 255, 255, 0);
-    transform: scale(1, 1);
-  }
 }
 #welcome-section p {
   color: white;
   font-size: 1.1rem;
   padding: 0 3rem;
   margin-top: 1rem;
-  /* text-shadow: 1px 1px 30px var(--dark-cyan); */
 }
 
 #projects {
   text-align: center;
-  padding-top: 3.5rem;
+  margin-top: 3.5rem;
 }
-
 #projects p {
   margin-top: 1.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: underline wavy;
   text-underline-position: under;
@@ -487,12 +442,9 @@ figcaption {
 }
 
 #contact {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   text-align: center;
-  margin-left: 5rem;
-  margin-right: 5rem;
 }
-
 #contact p {
   margin-top: 1.5rem;
 }
@@ -506,24 +458,28 @@ figcaption {
   #navbar {
     padding: 1rem;
   }
-
   #navbar a {
     padding-bottom: 0.25rem;
+    font-size: 1.1rem;
   }
 
   #welcome-section p {
     font-size: 1.25rem;
   }
-
   #welcome-section h1 {
+    font-size: 3rem;
     margin-top: 6rem;
+    line-height: 4rem;
   }
 
   #contact {
     margin-top: 5.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 
   .project-grid {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;

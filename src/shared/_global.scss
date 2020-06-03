@@ -24,47 +24,45 @@ body {
   top: 0;
   width: 100%;
   padding: 1rem;
-  -webkit-transition: all ease-out .2s;
-  -moz-transition: all ease-out .2s;
-  -o-transition: all ease-out .2s;
   transition: all ease-out .2s;
-}
 
-#navbar.active {
-  background-color: $white;
-}
+  ul {
+    display: flex;
+    margin: 0;
+  }
 
-#navbar ul {
-  display: flex;
-  margin: 0;
-}
+  li {
+    list-style: none;
+  }
 
-#navbar li {
-  list-style: none;
-}
+  a {
+    color: $white;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    line-height: 1rem;
+    text-shadow: 1px 1px 0.5px $orange;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 1.25rem;
+  }
 
-#navbar a {
-  color: $white;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.05rem;
-  text-shadow: 1px 1px 0.5px $orange;
-  text-decoration: none;
-  text-transform: uppercase;
-  margin-left: 1.25rem;
-}
+  a:hover{
+    border-bottom: 3px solid $orange;
+  }
 
-#navbar.active a {
-  color: $dark-cyan;
-  text-shadow: none;
-}
+  &.active {
+    background-color: $white;
 
-#navbar a:hover {
-  border-bottom: 3px solid $orange;
+    a {
+      color: $dark-cyan;
+      text-shadow: none;
+    }
+  }
 }
 
 main {
-  padding: 1rem;
+  padding: 0 2rem;
 }
 
 #welcome-section {
@@ -72,78 +70,46 @@ main {
   flex-direction: column;
   height: 100vh;
   background: linear-gradient(0deg, $orange 30%, $strong-cyan 100%);
-}
 
-#welcome-section h1 {
-  font-size: 4rem;
-  font-family: $font-headers;
-  color: $white;
-  padding: 6rem 3rem 0;
-  margin-top: 3.5rem;
-  text-transform: uppercase;
-  line-height: 4rem;
-  text-shadow:
-               10px 10px      $dark-cyan,
-               9px 9px        $orange,
-               8px 8px        $orange,
-               7px 7px        $orange,
-               6px 6px        $orange,
-               5px 5px        $orange,
-               4px 4px        $orange,
-               3px 3px        $orange,
-               2px 2px        $orange,
-               1px 1px        $orange;
-}
-
-.star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: $white-trans;
-  border-radius: 5px;
-}
-
-@keyframes twinkle {
-  0% {
-    transform: scale(1, 1);
-    background: $white-trans;
-    animation-timing-function: ease-in .1s;
+  h1 {
+    font-size: 2rem;
+    font-family: $font-headers;
+    color: $white;
+    padding: 6rem 3rem 0;
+    margin-top: 3.5rem;
+    text-transform: uppercase;
+    line-height: 3rem;
+    text-shadow: 10px 10px  $dark-cyan,
+                 9px 9px    $orange,
+                 8px 8px    $orange,
+                 7px 7px    $orange,
+                 6px 6px    $orange,
+                 5px 5px    $orange,
+                 4px 4px    $orange,
+                 3px 3px    $orange,
+                 2px 2px    $orange,
+                 1px 1px    $orange;
   }
-  60% {
-    transform: scale(0.8, 0.8);
-    background: $white;
-    animation-timing-function: ease-out;
-  }
-  80% {
-    background: $white-trans;
-    transform: scale(1, 1);
-  }
-  100% {
-    background: $white-trans;
-    transform: scale(1, 1);
-  }
-}
 
-
-#welcome-section p {
-  color: $white;
-  font-size: 1.1rem;
-  padding: 0 3rem;
-  margin-top: 1rem;
-  /* text-shadow: 1px 1px 30px var(--dark-cyan); */
+  p {
+    color: $white;
+    font-size: 1.1rem;
+    padding: 0 3rem;
+    margin-top: 1rem;
+  }
 }
 
 #projects {
   text-align: center;
-  padding-top: 3.5rem;
-}
+  margin-top: 3.5rem;
 
-#projects p {
-  margin-top: 1.5rem;
+  p {
+    margin-top: 1.5rem;
+  }
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: underline wavy;
   text-underline-position: under;
@@ -162,7 +128,6 @@ h2 {
   max-height: 100%;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-
 }
 
 .project-tile {
@@ -178,15 +143,14 @@ figcaption {
 }
 
 #contact {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   text-align: center;
-  margin-left: 5rem;
-  margin-right: 5rem;
+
+  p {
+    margin-top: 1.5rem;
+  }
 }
 
-#contact p {
-  margin-top: 1.5rem;
-}
 
 /* Devices larger than 850px wide, e.g. laptops. */
 
@@ -197,25 +161,37 @@ figcaption {
 
   #navbar {
     padding: 1rem;
+
+    a {
+      padding-bottom: 0.25rem;
+      font-size: 1.1rem;
+    }
   }
 
-  #navbar a {
-    padding-bottom: 0.25rem;
+  #welcome-section {
+    p {
+      font-size: 1.25rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 6rem;
+      line-height: 4rem;
+    }
   }
 
-  #welcome-section p {
-    font-size: 1.25rem;
-  }
+  #projects {
 
-  #welcome-section h1 {
-    margin-top: 6rem;
   }
 
   #contact {
     margin-top: 5.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 
   .project-grid {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
